@@ -21,27 +21,27 @@ export function Hero() {
         <div className="space-y-8 animate-in fade-in slide-in-from-left-8 duration-700">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border-primary/10 text-primary text-sm font-semibold">
             <span className="flex h-2 w-2 rounded-full bg-accent animate-ping" />
-            Empowering Digital Collaboration
+            Empowering Household Collaboration
           </div>
           
           <h1 className="text-6xl md:text-8xl font-bold leading-[0.9] tracking-tighter">
             Seamlessly <br />
-            <span className="text-gradient">Organize</span> Your <br />
-            Digital World.
+            <span className="text-gradient">Manage</span> Your <br />
+            Home Life.
           </h1>
           
           <p className="text-xl text-muted-foreground max-w-lg leading-relaxed">
-            OurTab Digital brings order to chaos. A professional workspace designed for teams who value clarity, speed, and premium aesthetics.
+            OurTab Digital brings financial order to shared living. A professional workspace designed for houses who value clarity, security, and simplicity.
           </p>
 
           <div className="flex flex-wrap gap-4">
             <Button size="lg" className="rounded-full bg-primary hover:bg-primary/90 px-8 h-14 text-lg" asChild>
               <Link href="https://app.ourtab.online">
-                Start for Free <ArrowRight className="ml-2 w-5 h-5" />
+                Get Started <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
             </Button>
-            <Button size="lg" variant="outline" className="rounded-full glass border-white/30 h-14 text-lg px-8">
-              <PlayCircle className="mr-2 w-5 h-5" /> View Demo
+            <Button size="lg" variant="outline" className="rounded-full glass border-white/30 h-14 text-lg px-8" asChild>
+              <Link href="#features">Explore Features</Link>
             </Button>
           </div>
         </div>
