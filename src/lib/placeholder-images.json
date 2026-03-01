@@ -1,3 +1,28 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-bg",
+      "description": "Abstract digital network background with deep blue gradients",
+      "imageUrl": "https://images.unsplash.com/photo-1636703781874-ffa0c5de09aa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxkaWdpdGFsJTIwdGVjaG5vbG9neSUyMG5ldHdvcmt8ZW58MHx8fHwxNzcyMzk3NTg1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "digital technology network"
+    },
+    {
+      "id": "app-mockup",
+      "description": "Modern mobile app interface mockup showing a sleek dashboard",
+      "imageUrl": "https://images.unsplash.com/photo-1759256243611-502772ac391b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bW9iaWxlJTIwYXBwJTIwZGFzaGJvYXJkfGVufDB8fHx8MTc3MjM5NzU4NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mobile app dashboard"
+    },
+    {
+      "id": "feature-dynamic",
+      "description": "Iconography representing dynamic content generation",
+      "imageUrl": "https://images.unsplash.com/photo-1716637644831-e046c73be197?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlfGVufDB8fHx8MTc3MjMyMzgyNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "artificial intelligence"
+    },
+    {
+      "id": "feature-sharing",
+      "description": "Visual representation of seamless tab sharing and collaboration",
+      "imageUrl": "https://images.unsplash.com/photo-1566140967404-b8b3932483f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx0ZWFtJTIwY29sbGFib3JhdGlvbnxlbnwwfHx8fDE3NzIzNTcwMDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "team collaboration"
+    }
+  ]
 }
