@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
@@ -33,8 +32,19 @@ export function Footer() {
             <Link href="#" className="hover:text-primary transition-colors">Documentation</Link>
           </div>
 
-          <div className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} OurTab Digital. All rights reserved.
+          <div className="text-sm text-muted-foreground flex flex-col items-center md:items-end gap-1">
+            <span>© {new Date().getFullYear()} OurTab Digital. All rights reserved.</span>
+            <span>
+              Developed by:{" "}
+              <Link 
+                href="https://github.com/sria-the-fury" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-primary hover:text-accent transition-colors font-medium"
+              >
+                sria-the-fury
+              </Link>
+            </span>
           </div>
         </div>
       </div>
