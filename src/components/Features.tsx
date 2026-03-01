@@ -8,7 +8,11 @@ import {
   ShoppingCart, 
   BellRing,
   CheckCircle2,
-  ChevronRight
+  Lock,
+  Users,
+  PieChart,
+  ListTodo,
+  Sparkles
 } from "lucide-react";
 
 const featureGroups = [
@@ -19,9 +23,9 @@ const featureGroups = [
     bg: "bg-blue-500/10",
     items: [
       "Google Sign-In via Firebase Authentication.",
-      "Protected Routes — unauthenticated users are redirected to login.",
+      "Protected Routes — unauthenticated users are redirected to the login page.",
       "Persistent Sessions across page refreshes.",
-      "Permission-based Access — member-only views and owner-only editing."
+      "Permission-based Access — only house members can view expenses, and only owners can edit them within a 48-hour window."
     ]
   },
   {
@@ -30,12 +34,12 @@ const featureGroups = [
     color: "text-emerald-500",
     bg: "bg-emerald-500/10",
     items: [
-      "Named Households — create or join via secure invite.",
-      "Role System — Managers approve requests; Members have standard access.",
-      "Manager Promotion — dynamic role switching with creator protection.",
-      "Meal Management — toggle Meals On/Off with approval flows.",
-      "Fund Deposits — secure house account with manager verification.",
-      "Collaborative Deletion — requires approval from all members."
+      "Named Households — create or join a house via invite.",
+      "Role System — Managers can update member settings (Rent, Role) and approve requests.",
+      "Manager Promotion — dynamic role switching; if a non-creator manager promotes someone else, they revert to member status.",
+      "Meal Management — toggle \"Meals On/Off\" with a manager approval flow.",
+      "Fund Deposits — members can deposit funds into the house account requiring manager verification.",
+      "Collaborative Deletion — house deletion requires approval from all members."
     ]
   },
   {
@@ -44,11 +48,11 @@ const featureGroups = [
     color: "text-purple-500",
     bg: "bg-purple-500/10",
     items: [
-      "Real-time Overview — total expenses vs. personal monthly spending.",
-      "Smart Settlements — automated debt optimization algorithm.",
-      "Expense History — browse recent or navigate monthly archives.",
+      "Real-time Overview — total house expenses vs. your personal monthly spending.",
+      "Smart Settlements — automated calculation of who owes whom, optimized to minimize transaction count.",
+      "Expense History — browse recent expenses or navigate through previous months with ease.",
       "Currency Support — configurable house currency ($, ₹, £, etc.).",
-      "PDF Export — one-click professional expense reports."
+      "PDF Export — generate professional expense reports with one click (via jsPDF)."
     ]
   },
   {
@@ -57,21 +61,13 @@ const featureGroups = [
     color: "text-orange-500",
     bg: "bg-orange-500/10",
     items: [
-      "Multi-Contributor Splitting — by absolute amounts or percentages.",
-      "Shortcut Actions — 'I Pay All' or 'Split Equally' for rapid entry.",
-      "Interactive Buy List — shared list with auto-capitalization.",
-      "Smart Auto-Mark — items auto-ticked when matching expenses added.",
-      "Cleanup Automation — auto-deletion of completed items."
+      "Multi-Contributor Splitting — split bills by absolute amounts or percentages.",
+      "Shortcut Actions — \"I Pay All\" or \"Split Equally\" for rapid entry.",
+      "Interactive Buy List — shared list with auto-capitalization and check-off history.",
+      "Smart Auto-Mark — when an expense is added, the matching item on the buy list is automatically ticked.",
+      "Cleanup Automation — completed items auto-delete after 12 hours."
     ]
   }
-];
-
-const notificationItems = [
-  { icon: ShoppingCart, label: "Shopping Alerts", desc: "Buy List updates in real-time." },
-  { icon: BarChart3, label: "Expense Alerts", desc: "Instant sync on bills and edits." },
-  { icon: ShieldCheck, label: "Payment & Funds", desc: "Deposit approvals and settlements." },
-  { icon: Home, label: "House Management", desc: "Role changes and member joins." },
-  { icon: BellRing, label: "Meal Requests", desc: "Manager notifications for toggles." }
 ];
 
 export function Features() {
@@ -81,11 +77,11 @@ export function Features() {
         <div className="text-center max-w-3xl mx-auto mb-20">
           <h2 className="text-4xl md:text-6xl font-bold mb-6">Premium <span className="text-gradient">Ecosystem</span></h2>
           <p className="text-muted-foreground text-xl leading-relaxed">
-            OurTab Digital is more than just an expense tracker. It's a complete household management suite designed for transparency and peace of mind.
+            OurTab Digital is a complete household management suite designed for transparency and peace of mind.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {featureGroups.map((group, idx) => (
             <GlassCard key={idx} className="flex flex-col h-full border-primary/5 hover:border-primary/20 transition-all duration-500 group">
               <div className="flex items-center gap-4 mb-8">
@@ -112,37 +108,35 @@ export function Features() {
             <h3 className="text-3xl md:text-4xl font-bold mb-4">
               <span className="text-gradient">Notifications</span> System
             </h3>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Stay in sync with real-time, categorized alerts and live feedback.
+            <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              OurTab keeps the whole house in sync with real-time, categorized alerts:
             </p>
           </div>
 
-          <GlassCard className="bg-gradient-to-br from-white/80 to-white/40 border-accent/10">
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
-              {notificationItems.map((notif, idx) => (
-                <div key={idx} className="flex flex-col items-center text-center group">
-                  <div className="mb-4 p-4 rounded-full glass border-primary/10 group-hover:bg-primary group-hover:text-white transition-all duration-300">
-                    <notif.icon className="w-6 h-6" />
-                  </div>
-                  <h4 className="font-bold text-sm mb-1">{notif.label}</h4>
-                  <p className="text-xs text-muted-foreground">{notif.desc}</p>
-                </div>
-              ))}
+          <GlassCard className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 border-accent/10">
+            <div className="space-y-2">
+              <h4 className="font-bold flex items-center gap-2 text-primary"><ShoppingCart className="w-4 h-4" /> Shopping Alerts</h4>
+              <p className="text-sm text-muted-foreground">Notified when housemates add items to the Buy List.</p>
             </div>
-            
-            <div className="mt-12 pt-8 border-t border-primary/5 flex flex-wrap justify-center gap-8 text-sm font-semibold text-primary/70">
-              <span className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-                Live "Pulse" Indicators
-              </span>
-              <span className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-                Custom Alert Sounds
-              </span>
-              <span className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-                Birthday Reminders
-              </span>
+            <div className="space-y-2">
+              <h4 className="font-bold flex items-center gap-2 text-primary"><BarChart3 className="w-4 h-4" /> Expense Alerts</h4>
+              <p className="text-sm text-muted-foreground">Stay updated whenever a new bill is added or edited.</p>
+            </div>
+            <div className="space-y-2">
+              <h4 className="font-bold flex items-center gap-2 text-primary"><PieChart className="w-4 h-4" /> Payment & Funds</h4>
+              <p className="text-sm text-muted-foreground">Alerts for requests, deposit approvals, or settled debts.</p>
+            </div>
+            <div className="space-y-2">
+              <h4 className="font-bold flex items-center gap-2 text-primary"><Users className="w-4 h-4" /> House Management</h4>
+              <p className="text-sm text-muted-foreground">Role changes, new members, or house deletion requests.</p>
+            </div>
+            <div className="space-y-2">
+              <h4 className="font-bold flex items-center gap-2 text-primary"><Sparkles className="w-4 h-4" /> Meal Requests</h4>
+              <p className="text-sm text-muted-foreground">Managers are notified of meal status changes.</p>
+            </div>
+            <div className="space-y-2">
+              <h4 className="font-bold flex items-center gap-2 text-primary"><BellRing className="w-4 h-4" /> Special Occasions</h4>
+              <p className="text-sm text-muted-foreground">Automated birthday reminders for house members.</p>
             </div>
           </GlassCard>
         </div>
