@@ -20,9 +20,14 @@ export function Hero() {
 
       <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div className="space-y-8 animate-in fade-in slide-in-from-left-8 duration-700">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border-primary/10 text-primary text-sm font-semibold">
-            <span className="flex h-2 w-2 rounded-full bg-accent animate-ping" />
-            Empowering Household Collaboration
+          <div className="space-y-3">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border-primary/10 text-primary text-sm font-semibold">
+              <span className="flex h-2 w-2 rounded-full bg-accent animate-ping" />
+              Empowering Household Collaboration
+            </div>
+            <p className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground/40 font-bold ml-4">
+              Tab comes from Tabular
+            </p>
           </div>
           
           <h1 className="text-6xl md:text-8xl font-bold leading-[0.9] tracking-tighter">

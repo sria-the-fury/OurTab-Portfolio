@@ -4,7 +4,7 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'OurTab | Premium App Portfolio',
-  description: 'Elevate your digital presence with OurTab. Experience premium glassmorphism and AI-powered management tools.',
+  description: 'Elevate your household management with OurTab. Experience seamless collaboration, financial clarity, and real-time synchronization in a premium digital workspace.',
 };
 
 export default function RootLayout({
