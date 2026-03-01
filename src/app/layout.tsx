@@ -3,7 +3,7 @@ import type {Metadata} from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'OurTab | Premium App Portfolio',
+  title: 'OurTab | Premium Household Management',
   description: 'Elevate your household management with OurTab. Experience seamless collaboration, financial clarity, and real-time synchronization in a premium digital workspace.',
 };
 
