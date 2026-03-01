@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from "next/link";
@@ -15,7 +14,6 @@ export function Navbar() {
           
           <div className="hidden md:flex items-center gap-8">
             <Link href="#features" className="text-sm font-medium hover:text-accent transition-colors">Features</Link>
-            <Link href="#marketing-tool" className="text-sm font-medium hover:text-accent transition-colors">AI Tool</Link>
             <Link href="#showcase" className="text-sm font-medium hover:text-accent transition-colors">Showcase</Link>
           </div>
 

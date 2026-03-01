@@ -1,8 +1,7 @@
-
 "use client";
 
 import { GlassCard } from "./GlassCard";
-import { Zap, Layout, Smartphone, Shield, Layers, Globe } from "lucide-react";
+import { Zap, Smartphone, Shield, Layers, Globe } from "lucide-react";
 
 const features = [
   {
@@ -18,13 +17,6 @@ const features = [
     description: "Organize projects into distinct visual layers, keeping your work and personal life perfectly separated.",
     color: "text-accent",
     bg: "bg-accent/10"
-  },
-  {
-    icon: Sparkles,
-    title: "AI Optimization",
-    description: "Automatically refine your marketing headlines and descriptions with our built-in Gemini-powered tool.",
-    color: "text-purple-500",
-    bg: "bg-purple-500/10"
   },
   {
     icon: Shield,
@@ -48,8 +40,6 @@ const features = [
     bg: "bg-red-500/10"
   }
 ];
-
-import { Sparkles } from "lucide-react";
 
 export function Features() {
   return (

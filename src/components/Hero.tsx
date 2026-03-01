@@ -1,4 +1,3 @@
-
 "use client";
 
 import Image from "next/image";
@@ -8,7 +7,6 @@ import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { ArrowRight, PlayCircle } from "lucide-react";
 
 export function Hero() {
-  const heroImage = PlaceHolderImages.find(img => img.id === 'hero-bg');
   const mockupImage = PlaceHolderImages.find(img => img.id === 'app-mockup');
 
   return (
@@ -59,19 +57,6 @@ export function Hero() {
                   className="object-cover"
                   data-ai-hint="mobile dashboard"
                 />
-              </div>
-            </div>
-          </div>
-          
-          {/* Decorative floating glass element */}
-          <div className="absolute -top-12 -right-12 z-20 glass p-6 rounded-3xl animate-bounce" style={{ animationDuration: '4s' }}>
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center">
-                <span className="text-accent font-bold">AI</span>
-              </div>
-              <div>
-                <p className="text-xs text-muted-foreground">Copy Generated</p>
-                <p className="text-sm font-bold">100% Accuracy</p>
               </div>
             </div>
           </div>
