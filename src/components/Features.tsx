@@ -87,7 +87,7 @@ export function Features() {
         <div className="text-center max-w-3xl mx-auto mb-20">
           <h2 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">Premium <span className="text-gradient">Ecosystem</span></h2>
           <p className="text-muted-foreground text-xl leading-relaxed font-light">
-            OurTab is a complete household management suite designed for transparency and peace of mind.
+            Meal system is for Bangladeshi Bachelors. OurTab is a complete household management suite designed for transparency and peace of mind.
           </p>
         </div>
 
@@ -134,6 +134,7 @@ export function Features() {
               { src: "/images/screenshots/buy-list.png", alt: "Buy List" },
               { src: "/images/screenshots/expense.png", alt: "Adding an Expense" },
               { src: "/images/screenshots/profile.png", alt: "User Profile" },
+
             ].map((img, i) => (
               <div key={i} className="min-w-[280px] md:min-w-[320px] aspect-[9/19.5] relative snap-center rounded-[2.5rem] overflow-hidden border-[6px] border-white/5 shadow-2xl shrink-0 group bg-black/50">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex items-end p-6">
