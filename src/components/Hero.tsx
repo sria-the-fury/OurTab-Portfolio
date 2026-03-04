@@ -37,7 +37,7 @@ export function Hero() {
           </h1>
 
           <p className="text-xl text-muted-foreground max-w-lg leading-relaxed font-light">
-            OurTab brings financial order to shared living. A professional workspace designed for houses who value clarity, security, and simplicity.
+            Originally designed as a premium mealing system for Bangladeshi Bachelors, OurTab now brings professional-grade financial order and harmony to shared living everywhere.
           </p>
 
           <div className="flex flex-wrap gap-4 pt-4">

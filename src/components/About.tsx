@@ -38,7 +38,7 @@ export function About() {
                         Our <span className="text-gradient">Story</span>
                     </h2>
                     <p className="text-xl text-muted-foreground leading-relaxed font-light">
-                        OurTab was born from the chaos of shared living. We believe that your home should be your sanctuary, not a source of financial stress. We've built a professional-grade workspace for the most important organization in your life: <span className="text-white font-medium">your home.</span>
+                        OurTab was born from the unique challenges of managing meals and expenses in Bangladeshi bachelor messes. We believe that your home should be your sanctuary, not a source of financial stress. We've evolved that core experience into a professional-grade workspace for the most important organization in your life: <span className="text-white font-medium">your home.</span>
                     </p>
                 </div>
 
