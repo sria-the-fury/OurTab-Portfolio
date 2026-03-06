@@ -15,6 +15,21 @@ interface LogEntry {
 
 const changelog: LogEntry[] = [
     {
+        version: "1.3.0",
+        date: "March 2026",
+        title: "Unified Invites & Social Connectivity",
+        description: "Streamlined household management with a unified invitation flow and enhanced social sharing features.",
+        icon: Zap,
+        color: "text-amber-400",
+        features: [
+            "Unified Invitation Flow: Accept or decline house invites directly from your profile.",
+            "Messenger Integration: Replaced legacy social icons with Messenger for accurate sharing.",
+            "Real-time Meal History: Persistent logging and timezone fixes for reliable tracking.",
+            "Notification Cleanup: Automatic clearing of processed join requests.",
+            "QR & Link Sharing: One-tap household joining via the new landing page."
+        ]
+    },
+    {
         version: "1.2.0",
         date: "March 2026",
         title: "Premium Redesign & Inline Actions",
