@@ -9,10 +9,12 @@ export const metadata: Metadata = {
   keywords: ['OurTab', 'Meal System', 'Bachelor House', 'Expenses Tracking', 'Household Management', 'Split Bills'],
   icons: {
     icon: [
-      { url: '/favicon.ico' },
-      { url: '/icon.png', type: 'image/png' },
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon.png', type: 'image/png', sizes: '512x512' },
     ],
-    apple: '/icon.png',
+    apple: [
+      { url: '/icon.png', sizes: '180x180', type: 'image/png' },
+    ],
   },
   alternates: {
     canonical: '/',
