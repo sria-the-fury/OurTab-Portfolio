@@ -83,8 +83,14 @@ function TeamMemberCard({ member }: { member: typeof team[0] }) {
             </div>
 
             <div className="flex gap-4 pt-6 border-t border-white/5 mt-6">
-                <Link href={member.socials.linkedin} className="text-muted-foreground hover:text-emerald-400 transition-colors">
-                    <LinkedinIcon className="w-5 h-5" />
+                <Link 
+                    href={member.socials.linkedin} 
+                    className="text-muted-foreground hover:text-emerald-400 transition-colors"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`View ${member.name}'s LinkedIn profile`}
+                >
+                    <LinkedinIcon className="w-5 h-5" aria-hidden="true" />
                 </Link>
             </div>
         </GlassCard>

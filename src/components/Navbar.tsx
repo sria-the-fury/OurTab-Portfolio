@@ -21,7 +21,7 @@ export function Navbar() {
           </div>
 
           <Button asChild className="rounded-full bg-emerald-500 hover:bg-emerald-400 text-black px-6 font-semibold shadow-[0_0_20px_-5px_rgba(16,185,129,0.5)] transition-all duration-300 hover:shadow-[0_0_25px_-5px_rgba(16,185,129,0.6)]">
-            <Link href="https://app.ourtab.online" target="_blank">Launch App</Link>
+            <Link href="https://app.ourtab.online" target="_blank" rel="noopener noreferrer">Launch App</Link>
           </Button>
         </div>
       </div>

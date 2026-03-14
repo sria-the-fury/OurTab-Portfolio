@@ -108,7 +108,7 @@ export function Features() {
               <ul className="space-y-4 flex-1">
                 {group.items.map((item, i) => (
                   <li key={i} className="flex items-start gap-3 text-muted-foreground/80 group-hover:text-muted-foreground transition-colors">
-                    <CheckCircle2 className={`w-5 h-5 mt-0.5 shrink-0 text-emerald-500/70 group-hover:text-emerald-400 transition-colors`} />
+                    <CheckCircle2 className={`w-5 h-5 mt-0.5 shrink-0 text-emerald-500/70 group-hover:text-emerald-400 transition-colors`} aria-hidden="true" />
                     <span className="text-base font-light leading-snug">{item}</span>
                   </li>
                 ))}
@@ -127,20 +127,31 @@ export function Features() {
             </p>
           </div>
 
-          <div className="flex gap-6 overflow-x-auto pb-12 pt-4 snap-x snap-mandatory hide-scrollbar">
+          <div 
+            className="flex gap-6 overflow-x-auto pb-12 pt-4 snap-x snap-mandatory hide-scrollbar focus-within:ring-2 focus-within:ring-emerald-500/50 rounded-[2.5rem]"
+            tabIndex={0}
+            role="region"
+            aria-label="App screenshots gallery"
+          >
             {[
-              { src: "/images/screenshots/deposit.png", alt: "Fund Deposit Breakdown" },
-              { src: "/images/screenshots/meals.png", alt: "Meal Tracking" },
-              { src: "/images/screenshots/buy-list.png", alt: "Buy List" },
-              { src: "/images/screenshots/expense.png", alt: "Adding an Expense" },
-              { src: "/images/screenshots/profile.png", alt: "User Profile" },
+              { src: "/images/screenshots/deposit.png", alt: "Fund Deposit Breakdown screen showing pending and approved deposits" },
+              { src: "/images/screenshots/meals.png", alt: "Meal Tracking screen showing active meals and member status" },
+              { src: "/images/screenshots/buy-list.png", alt: "Buy List screen showing grocery items to be purchased" },
+              { src: "/images/screenshots/expense.png", alt: "Adding an Expense screen with contributor split options" },
+              { src: "/images/screenshots/profile.png", alt: "User Profile screen with house settings and invites" },
 
             ].map((img, i) => (
               <div key={i} className="min-w-[280px] md:min-w-[320px] aspect-[9/19.5] relative snap-center rounded-[2.5rem] overflow-hidden border-[6px] border-white/5 shadow-2xl shrink-0 group bg-black/50">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex items-end p-6">
                   <span className="text-white font-semibold text-lg tracking-wide">{img.alt}</span>
                 </div>
-                <Image src={img.src} alt={img.alt} fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                <Image 
+                  src={img.src} 
+                  alt={img.alt} 
+                  fill 
+                  className="object-cover group-hover:scale-105 transition-transform duration-700" 
+                  sizes="(max-width: 768px) 280px, 320px"
+                />
               </div>
             ))}
           </div>

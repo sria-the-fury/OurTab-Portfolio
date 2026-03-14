@@ -13,7 +13,7 @@ export function Hero() {
   return (
     <section className="relative min-h-screen pt-32 pb-20 flex items-center overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute inset-0 -z-10 bg-black/50">
+      <div className="absolute inset-0 -z-10 bg-black/50" aria-hidden="true">
         <div className="absolute top-1/4 right-1/4 w-[40%] h-[40%] bg-emerald-500/10 blur-[120px] rounded-full animate-pulse" />
         <div className="absolute bottom-1/4 left-1/4 w-[30%] h-[30%] bg-cyan-500/10 blur-[100px] rounded-full" />
       </div>
@@ -25,7 +25,7 @@ export function Hero() {
               <span className="flex h-2 w-2 rounded-full bg-emerald-400 animate-ping" />
               Empowering Household Collaboration
             </div>
-            <p className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground/50 font-bold ml-4">
+            <p className="text-[12px] uppercase tracking-[0.25em] text-muted-foreground/70 font-bold ml-4">
               Tab comes from Tabular
             </p>
           </div>
@@ -42,8 +42,8 @@ export function Hero() {
 
           <div className="flex flex-wrap gap-4 pt-4">
             <Button size="lg" className="rounded-full bg-emerald-500 hover:bg-emerald-400 text-black px-8 h-14 text-lg font-semibold shadow-[0_0_30px_-5px_rgba(16,185,129,0.4)] transition-all duration-300 hover:shadow-[0_0_40px_-5px_rgba(16,185,129,0.6)] hover:-translate-y-1" asChild>
-              <Link href="https://app.ourtab.online">
-                Get Started <ArrowRight className="ml-2 w-5 h-5" />
+              <Link href="https://app.ourtab.online" target="_blank" rel="noopener noreferrer">
+                Get Started <ArrowRight className="ml-2 w-5 h-5" aria-hidden="true" />
               </Link>
             </Button>
             <Button size="lg" variant="outline" className="rounded-full glass border-white/10 hover:border-white/20 hover:bg-white/5 h-14 text-lg px-8 transition-all duration-300 hover:-translate-y-1" asChild>
@@ -59,11 +59,12 @@ export function Hero() {
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/60 z-10 pointer-events-none" />
                 <Image
                   src="/images/dashboard-mockup.png"
-                  alt="OurTab App Dashboard Mockup"
+                  alt="OurTab App Dashboard Mockup showing household expenses and meal system"
                   fill
                   className="object-cover"
                   data-ai-hint="mobile dashboard"
                   priority
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
             </div>
